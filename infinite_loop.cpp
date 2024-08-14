@@ -1,11 +1,13 @@
 // infinite_loop.cpp
 #include <iostream>
-#include <chrono>
-#include <thread>
+#include <vector>
 
 int main() {
+    std::vector<int*> memoryAllocations;
+
+    int a = 0;
     while (true) {
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        a = a + 1;
     }
     return 0;
 }
